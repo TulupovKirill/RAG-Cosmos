@@ -2,9 +2,9 @@ import chromadb
 import torch
 from transformers import AutoTokenizer, AutoModelForCausalLM, LlamaForCausalLM
 
-KOSMO_CHROMA_FOLDER = "PATH"
+KOSMO_CHROMA_FOLDER = "kosmo_chroma2"
 
-assert KOSMO_CHROMA_FOLDER != "PATH", "specify correct path"
+# assert KOSMO_CHROMA_FOLDER != "kosmo_chroma2", "specify correct path"
 
 chroma_client = chromadb.PersistentClient(path=KOSMO_CHROMA_FOLDER)
 

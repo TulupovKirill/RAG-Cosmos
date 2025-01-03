@@ -1,3 +1,4 @@
 chromadb==0.6.0
 torch==2.5.1
 transformers==4.47.1
+fastapi[standart]
