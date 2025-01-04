@@ -1,9 +1,9 @@
 from fastapi import FastAPI
-from ..hermes import talk_with_hermes
+import requests
 
 app = FastAPI()
 
 @app.get("/rag/get")
 async def get_response(query):
-    response = talk_with_hermes(query)
-    return response
+    response = requests.get("https://3065-35-230-38-63.ngrok-free.app", params={"query": query})
+    return response.json()
