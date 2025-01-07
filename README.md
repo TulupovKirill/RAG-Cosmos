@@ -1,7 +1,11 @@
-Всё делает `talk_with_hermes(string_query)`
+Для начала установить все зависимости
 
-Указать путь к распакованной папке `kosmo_chroma2` в переменной `KOSMO_CHROMA_FOLDER`
+pip install -r requirement.txt
 
-Помимо библиотек из requirement может потребовать установку:</br>
-'accelerate>=0.26.0'</br>
-sentence_transformers
+Если тестируем, то переходим в папку Test_API
+
+cd Test_API
+
+Запускаем проект
+
+fastapi dev main.py
