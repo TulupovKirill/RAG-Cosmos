@@ -1,0 +1,312 @@
+/* ===== Основные стили страницы ===== */
+body {
+  /* margin: 0;
+  padding: 0; */
+  /* font-family: sans-serif; */
+  /* background-color: #000;  */
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Контейнер для всей Солнечной системы */
+.solar-system{
+  position: absolute; 
+  margin: auto; 
+  top: 0; 
+  right: 0; 
+  bottom: 0; 
+  left: 0; 
+  width: 60vw;
+  height: 60vh;
+}
+
+/* ===== Солнце ===== */
+.sun {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 5.5vw;
+  height: 5.5vw;
+  margin: -2.75vw 0 0 -2.75vw; /* центрируем на 50%, 50% */
+  background: url("../../img/res/sun.png") no-repeat center/contain;
+  border-radius: 50%;
+  box-shadow: 0 0 2vw rgba(255, 165, 0, 0.7);
+  z-index: 10;
+}
+
+/* ===== Общий контейнер орбиты ===== */
+.orbit { 
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border: 0.06vw dotted rgba(255, 255, 255, 1);
+  border-radius: 50%;
+  transform-origin: center center; /* точка вращения — центр */
+}
+
+/* Общий стиль планеты */
+.planet {
+  position: absolute;
+  top: 0;       
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  border-radius: 50%;
+}
+
+/* ===== Меркурий ===== */
+.orbit-mercury {
+  width: 8vw;
+  height: 8vw;
+  margin: -4vw 0 0 -4vw;
+  animation: orbit-mercury 10s linear infinite;
+}
+.mercury {
+  width: 0.7vw;
+  height: 0.7vw;
+  background-image: url("../../img/res/mercury.png");
+}
+@keyframes orbit-mercury {
+  0%   { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* ===== Венера ===== */
+.orbit-venus {
+  width: 13vw;
+  height: 13vw;
+  margin: -6.5vw 0 0 -6.5vw;
+  animation: orbit-venus 16s linear infinite;
+}
+.venus {
+  width: 1vw;
+  height: 1vw;
+  background-image: url("../../img/res/venus.png");
+}
+@keyframes orbit-venus {
+  0%   { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+/* ===== Земля ===== */
+.orbit-earth {
+  width: 17vw;
+  height: 17vw;
+  margin: -8.5vw 0 0 -8.5vw;
+  animation: orbit-earth 20s linear infinite;
+}
+.earth {
+  width: 1.4vw;
+  height: 1.4vw;
+  background-image: url("../../img/res/earth.png");
+}
+/* ===== Луна ===== */
+.orbit-moon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 2vw;
+  height: 2vw;
+  margin: -1vw 0 0 -1vw;
+  border: 0.1vw dashed rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  transform-origin: center center;
+  animation: orbit-moon 4s linear infinite;
+}
+
+/* Сама Луна внутри orbit-moon */
+.moon {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 0.5vw;
+  height: 0.5vw;
+  border-radius: 50%;
+  background: url("../../img/res/moon.png") no-repeat center/contain;
+}
+
+@keyframes orbit-earth {
+  0%   { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+@keyframes orbit-moon {
+  0%   { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* ===== Марс ===== */
+.orbit-mars {
+  width: 22vw;
+  height: 22vw;
+  margin: -11vw 0 0 -11vw;
+  animation: orbit-mars 24s linear infinite;
+}
+.mars {
+  width: 1vw;
+  height: 1vw;
+  background-image: url("../../img/res/mars.png");
+}
+@keyframes orbit-mars {
+  0%   { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* ===== Пояс астероидов ===== */
+.orbit-asteroids {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 32vw;
+  height: 32vw;
+  margin: -16vw 0 0 -16vw;
+  animation: orbit-asteroids 28s linear infinite;
+}
+.asteroids {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 32vw;
+  height: 32vw;
+  background-image: url("../../img/res/asteroid.png");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  opacity: 0.7;
+}
+@keyframes orbit-asteroids {
+  0%   { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+/* ===== Юпитер ===== */
+.orbit-jupiter {
+  width: 32vw;
+  height: 32vw;
+  margin: -16vw 0 0 -16vw;
+  animation: orbit-jupiter 36s linear infinite;
+}
+.jupiter {
+  width: 1.8vw;
+  height: 1.8vw;
+  background-image: url("../../img/res/jupiter.png");
+}
+@keyframes orbit-jupiter {
+  0%   { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* ===== Сатурн ===== */
+.orbit-saturn {
+  width: 37vw;
+  height: 37vw;
+  margin: -18.5vw 0 0 -18.5vw;
+  animation: orbit-saturn 44s linear infinite;
+}
+.saturn {
+  width: 1.8vw;
+  height: 1.8vw;
+  background-image: url("../../img/res/saturn.png");
+}
+@keyframes orbit-saturn {
+  0%   { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* ===== Уран ===== */
+.orbit-uranus {
+  width: 41vw;
+  height: 41vw;
+  margin: -20.5vw 0 0 -20.5vw;
+  animation: orbit-uranus 58s linear infinite;
+}
+.uranus {
+  width: 1.8vw;
+  height: 1.8vw;
+  background-image: url("../../img/res/uranus.png");
+}
+@keyframes orbit-uranus {
+  0%   { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* ===== Нептун ===== */
+.orbit-neptune {
+  width: 45vw;
+  height: 45vw;
+  margin: -22.5vw 0 0 -22.5vw;
+  animation: orbit-neptune 60s linear infinite;
+}
+.neptune {
+  width: 1.6vw;
+  height: 1.6vw;
+  background-image: url("../../img/res/neptune.png");
+}
+@keyframes orbit-neptune {
+  0%   { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* .amogus {
+  width: 80px;
+  height: 100px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  outline: 10px solid rgb(var(--primary), .5);
+  position: relative;
+  transition: .3s;
+} */
+
+#img1 { background-image: url('img/sprites/Kirill_btn.png'); }
+#img2 { background-image: url('img/sprites/Nikita_btn.png'); }
+#img3 { background-image: url('img/sprites/Dasha_btn.png'); }
+#img4 { background-image: url('img/sprites/Anton_btn.png'); }
+
+.amogus {
+  width: 80px;
+  height: 100px;
+  position: absolute; /* Размер картинки */
+  transition: transform 1.5s; /* Плавное движение */
+}
+
+.amogus{
+  -webkit-animation-name:amogus;
+  animation-name:amogus;
+  -webkit-animation-duration:5s;
+  animation-duration:5s;
+  -webkit-animation-iteration-count:infinite;
+  animation-iteration-count:infinite;
+  -webkit-animation-timing-function:linear;
+  animation-timing-function:linear
+}
+
+/* критятся amogus */
+@keyframes amogus{
+  from
+  {
+    -webkit-transform:rotate(0deg);
+    transform:rotate(0deg)
+  }
+  to
+  {
+    -webkit-transform:rotate(360deg);
+    transform:rotate(360deg)
+  }
+}
+
+@-webkit-keyframes amogus{
+  from
+  {
+    -webkit-transform:rotate(0deg)
+  }
+  to
+  {
+    -webkit-transform:rotate(360deg)
+  }
+}

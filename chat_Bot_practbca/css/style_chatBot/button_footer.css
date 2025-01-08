@@ -1,0 +1,95 @@
+* {
+  margin: 0;
+  padding: 0;
+ scroll-behavior: smooth;
+}
+
+body {
+ background: #000;
+ /* color: #c3c3d9; */
+ font-size: 1.8vw;
+ font-family: 'Jura', sans-serif;
+ text-indent: 1.5em;
+ text-align: justify;
+ /* max-width: 1920px; */
+ cursor: url('../img/curs.png'), auto;
+}
+
+a:hover {
+ cursor: url('../img/curs3.png'), pointer;
+}
+
+/*Ссылки*/
+.link {
+ position: absolute;
+ display: block;
+ color: #c3c3d9;
+ text-decoration: none;
+ right: 10%;
+ text-indent: 0;
+}
+
+.link:hover {
+ color: #f02b4f;
+ text-decoration: underline;
+}
+
+/*Ссылки на другие страницы*/
+.links {
+ position: fixed;
+ width: 100%;
+ height: 40vh;
+ top: 95vh;
+ left: 0vw;
+ background-color: #15151f;
+ border-radius: 50%;
+ border: 5px #19194f;
+ box-shadow: inset -2px 2px 1px rgba(255,255,255,.3);
+ opacity: 0.9;
+ z-index: 3;
+ text-indent: 0;
+ text-align: center;
+ transition-duration: 0.8s;
+}
+
+.links:hover {
+ transform: translateY(-5vh);
+}
+
+.links .link {
+ position: relative;
+ width: 25%;
+ display: inline-block;
+ left: 0;
+ margin-top: 3.7vh;
+}
+
+/*Кнопка "Наверх"*/
+.up {
+ position: fixed;
+ z-index: 4;
+ left: 5vw;
+ bottom: 5vh;
+ width: 5vw;
+ height: 5vw;
+ background-color: #15151f;
+ border-radius: 50%;
+ border: 5px #19194f;
+ box-shadow: inset 3px -3px 1px rgba(0,0,0,.3), inset -3px 3px 1px rgba(255,255,255,.3), -3px 3px 5px rgba(255,255,255,.3);
+ transition-duration: 0.8s;
+}
+
+.up a {
+ text-indent: 0;
+}
+
+.up:hover {
+ cursor: url('../img/curs2.png'), pointer;
+ transform: scale(1.1);
+ background-color: #f02b4f;
+ opacity: 0.5;
+}
+
+.up:active {
+ opacity: 0;
+}

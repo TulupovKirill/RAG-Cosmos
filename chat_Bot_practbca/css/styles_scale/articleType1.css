@@ -1,0 +1,42 @@
+.type1 {
+  height: 38vw;
+}
+
+.img_type1 {
+  position: relative;
+  /* pointer-events: none; */
+}
+
+.img_type1 img {
+  position: absolute;
+  width: 35%;
+  left: 8vw;
+}
+
+.text_type1 {
+  position: relative;
+  margin-left: 54vw;
+  margin-right: 4vw;
+  margin-top: 2.5vw;
+}
+
+.text_type1 .text_head_type1 {
+  margin-left: -2vw;
+}
+
+#print1 {
+  position: relative;
+  margin-top: 1vw;
+  margin-left: 10vw;
+}
+
+#arrow1 {
+  position: relative;
+  margin-left: 35vw;
+  margin-top: -14vw;
+  margin-right: 60vw;
+}
+
+#arrow1 img {
+  width: 7vw;
+}
