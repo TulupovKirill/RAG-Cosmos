@@ -31,6 +31,6 @@ async def help(request: Request):
 async def help(request: Request):
     return templates.TemplateResponse(request=request, name='spacesystem.html')
 
-@app.get("test_talk")
+@app.get("/talk")
 async def get_response(query: str):
-    return {"query": "Ваш запрос: " + query}
+    return requests.get('https://a781-34-169-62-112.ngrok-free.app/test_talk', params={"query": query}).json()["response"]

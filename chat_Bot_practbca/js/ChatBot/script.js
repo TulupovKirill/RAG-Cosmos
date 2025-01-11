@@ -6,6 +6,7 @@ document.getElementById("message-input").addEventListener("keydown", function (e
 });
 
 function sendMessage() {
+    console.log(1000)
     const input = document.getElementById("message-input");
     const message = input.value.trim();
     if (message === "") return;
@@ -13,12 +14,15 @@ function sendMessage() {
     addMessage(message, "user-message");
     input.value = "";
     
-    setTimeout(() => {
-        addMessage("url:", "bot-message");
-    }, 1000);
     // setTimeout(() => {
-    //     addMessage("Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.", "bot-message");
+    //     const response = fetch(`http://localhost:8000/talk?query=${message}`, {method: "GET"}).then((j) => j.json())
+    //     addMessage("писька", "bot-message");
     // }, 1000);
+
+
+    setTimeout(() => {
+        addMessage("Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.", "bot-message");
+    }, 1000);
 }
 
 function addMessage(text, className) {
